@@ -1,0 +1,67 @@
+name {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+longevity::before {
+  content: "Employee during: "
+}
+longevity {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+role {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+role::before {
+  content: "Title: "
+}
+
+impact {
+  display: list-item;
+  margin-left: 2em;
+}
+impacts::before {
+  content: "Major accomplishments:"
+}
+impacts {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+introduction::before {
+  content: "Role description: "
+}
+introduction {
+  margin-left: 1em;
+}
+reports-to{
+  margin-top: 1em;
+  display: block;
+}
+reports-to::before{
+  content: " Reports to: ";
+  margin-left: 1em;
+}
+direct-report{
+  display: block;
+  margin-left: 1em;
+}
+
+direct-report::before{
+    content: " Is in charge of: ";
+}
+
+employee {
+  display: block;
+  margin-bottom: 3em;
+}
