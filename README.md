@@ -15,7 +15,7 @@ Consider the following html fragments:
 and
 `<div class="corp-employee"> Tomás Zubiri </div>`
 
-There are merits to both styles, one is cleaner, easier to write, read, and can enjoy better static checking due to the closing tag. The other is more traditional and has been standarized and implemented in browsers for longer, however both are completely legal.
+There are merits to both styles, one is cleaner, easier to write, read, and can enjoy better static checking due to the closing tag. The other is more traditional, has been standarized and implemented in browsers for longer and enjoys multiple inheritance from infinite classes and 1 tag., however both are completely legal.
 
 # Why custom-tags raise an error.
 
