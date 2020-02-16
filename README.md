@@ -8,8 +8,23 @@ The filenames are the command that was ran, and the contents correspond to the o
 The expectedoutput directory contain the outputs that I'd expect if the proposal were to be implemented.
 The expectedoutput contains some outputs that aren't present in the actualoutput folder, these are new features.
 
+# Why custom-tags
 
-# Why do custom tags without hyphens issue a warning?
+Consider the following html fragments:
+`<corp-employee> Tomás Zubiri <corp-employee>`
+and
+`<div class="corp-employee"> Tomás Zubiri </div>`
+
+There are merits to both styles, one is cleaner, easier to write, read, and can enjoy better static checking due to the closing tag. The other is more traditional and has been standarized and implemented in browsers for longer, however both are completely legal.
+
+# Why custom-tags issue an error.
+
+Despite the WHATWG standard defining unknown custom tags as functionally identical to divs, an error is raised upon encounter, the user is asked to define these tags through the command line or config file.
+The error is de facto downgraded to a warning since it can be silenced without modifying the code. Tidy is an opinionated tool, so a warning is interpreted as a disincentive to use the feature.
+Features like, reading definitions from a css file, allowing all custom tags, allowing tags from a specific namespace, spell checking an unknown tag, giving less warnings to hyphenated tags (adding a hyphen to a custom tag can be an organic way to silence a warning)
+Consider that things like class attributes are not checked for spelling mistakes, it's arguable that custom tags are more important than this static check, but it's always easier to push a change when it presents an objectively superior advantage, spell checking could even be applied to other things like classes (along with css file definitions) to improve the general quality of validity checks.
+
+# Why unhyphenated custom tags issue a warning
 Currently tidy shows the following error if the developer defines a custom tag without a hyphen.
 
 > Warning: <customtag> is not approved by W3C
