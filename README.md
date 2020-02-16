@@ -17,12 +17,12 @@ and
 
 There are merits to both styles, one is cleaner, easier to write, read, and can enjoy better static checking due to the closing tag. The other is more traditional and has been standarized and implemented in browsers for longer, however both are completely legal.
 
-# Why custom-tags issue an error.
+# Why custom-tags raise an error.
 
 Despite the WHATWG standard defining unknown custom tags as functionally identical to divs, an error is raised upon encounter, the user is asked to define these tags through the command line or config file.
 The error is de facto downgraded to a warning since it can be silenced without modifying the code. Tidy is an opinionated tool, so a warning is interpreted as a disincentive to use the feature.
-Features like, reading definitions from a css file, allowing all custom tags, allowing tags from a specific namespace, spell checking an unknown tag, giving less warnings to hyphenated tags (adding a hyphen to a custom tag can be an organic way to silence a warning)
-Consider that things like class attributes are not checked for spelling mistakes, it's arguable that custom tags are more important than this static check, but it's always easier to push a change when it presents an objectively superior advantage, spell checking could even be applied to other things like classes (along with css file definitions) to improve the general quality of validity checks.
+The warning is raised not due to an interaction with the browser, but due to an inability of tidy to disambiguate between a spelling mistake or a custom tag. Unlike a lack of namespace, this warning is an artifact of the validator and brings no value. I propose tidy has plenty of options to disambiguate, possible features like, reading definitions from a css file, allowing all custom tags through an option, allowing tags from a specified namespace, spell checking an unknown tag, giving less warnings to hyphenated tags (adding a hyphen to a custom tag can be an organic way to silence a warning)
+Spell checking could even be applied to classes (along with css file definitions) to improve the general quality of validity checks.
 
 # Why unhyphenated custom tags issue a warning
 Currently tidy shows the following error if the developer defines a custom tag without a hyphen.
