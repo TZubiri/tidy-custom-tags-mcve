@@ -1,4 +1,4 @@
-=Structure=
+#Structure
 
 The files in the root directory are a sample webpage I would write. The style displayed on these files is at the core of this proposal.
 
@@ -9,7 +9,7 @@ The expectedoutput directory contain the outputs that I'd expect if the proposal
 The expectedoutput contains some outputs that aren't present in the actualoutput folder, these are new features.
 
 
-=Why do custom tags without hyphens issue a warning?=
+#Why do custom tags without hyphens issue a warning?
 Currently tidy shows the following error if the developer defines a custom tag without a hyphen.
 
 > Warning: <customtag> is not approved by W3C
