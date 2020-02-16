@@ -1,7 +1,7 @@
 
 line 9 column 5 - Warning: <employee> is a custom tag, but it doesn't follow the [naming conventions](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name) set by the w3c.
 To disable this warning just ensure that you use lowercase letters and include 1 dash like so 'custom-tag'!
-The best practice is to use the first part as a namespace and the second part as the tag's name. like so 'firefox-tag'.
+The best practice is to use the first part as a namespace and the second part as the tag's name. like so 'namespace-employee'.
 To disable this warning, you can use the --namespaceless-custom-tags, but beware, there is the risk of name collision if a browser assigns meaning to this tag.
 
 line 10 column 7 - Warning: <name> is not recognized!
