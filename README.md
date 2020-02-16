@@ -11,7 +11,7 @@ The expectedoutput contains some outputs that aren't present in the actualoutput
 # Why custom-tags
 
 Consider the following html fragments:
-`<corp-employee> Tomás Zubiri <corp-employee>`
+`<corp-employee> Tomás Zubiri </corp-employee>`
 and
 `<div class="corp-employee"> Tomás Zubiri </div>`
 
